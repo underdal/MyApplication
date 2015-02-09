@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -14,13 +15,21 @@ public class DisplayMessageActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Get the message from the intent
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(FooFragment.EXTRA_MESSAGE);
 
-        TextView textView = new TextView(this);
+        //Create the text view
+        //TextView textView = new TextView(this);
+
+
+        //Set the text view as the activity layout
+        setContentView(R.layout.activity_display_message);
+        TextView textView = (TextView) findViewById(R.id.custLabel1);
+
         textView.setTextSize(40);
-        textView.setText(message);
-        setContentView(textView);
+        textView.setText(textView.getText() +" "+ message);
+
 
     }
 
