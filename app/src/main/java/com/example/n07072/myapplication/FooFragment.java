@@ -38,7 +38,7 @@ public class FooFragment extends Fragment {
 
     //Called when user press the send button
     public void sendMessage() {
-        new LongOperation();
+        new LongOperation().execute();
 
     }
 

@@ -19,7 +19,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 public class ButtonTest extends ActivityInstrumentationTestCase2<MainActivity> {
     public ButtonTest() {
-        super("com.example.n07072.myapplication", MainActivity.class);
+        super(MainActivity.class);
     }
 
     @Override
